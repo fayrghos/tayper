@@ -1,0 +1,7 @@
+# Binários
+bin/
+lib/
+*.class
+
+# Editor
+.zed/
