@@ -1,6 +1,10 @@
+# Gradle
+build/
+.gradle/
+.kotlin/
+
 # Binários
 bin/
-lib/
 *.class
 
 # Editor
