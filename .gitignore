@@ -9,3 +9,6 @@ bin/
 
 # Editor
 .zed/
+
+# JDTLS
+org.eclipse.buildship*
