@@ -4,7 +4,7 @@ import com.raylib.Colors;
 import com.raylib.Raylib;
 import core.Jogo;
 import ui.componentes.CaixaTexto;
-import utils.CicloInteiro;
+import utils.Ciclador;
 
 /**
  * Implementa o menu principal do jogo.
@@ -15,7 +15,7 @@ public final class TelaPrincipal extends Tela {
         super(jogo);
     }
 
-    public CicloInteiro cicloBotao = new CicloInteiro(0, 0, 2);
+    public Ciclador cicloBotao = new Ciclador(0, 0, 2);
 
     @Override
     public void atualizar() {

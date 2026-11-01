@@ -1,6 +1,7 @@
 package core;
 
 import com.raylib.Raylib;
+import com.raylib.Raylib.Vector2;
 import core.ciclo.Atualizavel;
 import core.ciclo.Desenhavel;
 import core.entidades.Jogador;
@@ -27,7 +28,10 @@ public final class Jogo implements Atualizavel, Desenhavel {
     private Tela telaAtual;
 
     public Jogo() {
-        this.jogador = new Jogador();
+        this.jogador = new Jogador(
+            new Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA / 2),
+            new Vector2().x(64).y(64)
+        );
 
         this.telas = Map.of(
             TipoTela.PRINCIPAL,

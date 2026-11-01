@@ -31,7 +31,7 @@ public final class TelaJogatina extends Tela {
             return;
         }
 
-        if (jogo.jogador.vida <= 0) {
+        if (jogo.jogador.vidas <= 0) {
             jogo.mudarTela(TipoTela.FIM);
         }
     }
@@ -46,6 +46,7 @@ public final class TelaJogatina extends Tela {
             new Vector2().x(40).y(40)
         ).desenharAbsoluto();
 
+        jogo.jogador.desenhar();
         barraStatus.desenhar();
     }
 
@@ -68,7 +69,7 @@ public final class TelaJogatina extends Tela {
             }
         }
 
-        jogo.jogador.vida--;
+        jogo.jogador.vidas--;
         jogo.jogador.pontuador.reiniciarSequencia();
     }
 }

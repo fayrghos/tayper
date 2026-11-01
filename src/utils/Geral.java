@@ -8,6 +8,8 @@ import com.raylib.Raylib.Vector2;
  */
 public final class Geral {
 
+    public static final Vector2 VETOR2 = new Vector2().x(2).y(2);
+
     /**
      * Checa se o jogador apertou ou está segurando uma determinada tecla.
      *
