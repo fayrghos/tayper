@@ -19,7 +19,7 @@ import ui.telas.TipoTela;
 public final class Jogo implements Atualizavel, Desenhavel {
 
     public static final int LARGURA = 1280;
-    public static final int ALTURA = 720;
+    public static final int ALTURA = 736;
     private boolean rodando = true;
 
     public Jogador jogador;

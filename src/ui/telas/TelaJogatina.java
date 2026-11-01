@@ -2,10 +2,8 @@ package ui.telas;
 
 import com.raylib.Colors;
 import com.raylib.Raylib;
-import com.raylib.Raylib.Vector2;
 import core.Digitador;
 import core.Jogo;
-import ui.componentes.Texto;
 import ui.hud.BarraStatus;
 
 /**
@@ -40,17 +38,10 @@ public final class TelaJogatina extends Tela {
     public void desenhar() {
         Raylib.ClearBackground(Colors.DARKGREEN);
 
-        new Texto(
-            "Palavras válidas:\n\tAndar\n\tBaixar\n\tCair",
-            30,
-            new Vector2().x(40).y(40)
-        ).desenharAbsoluto();
-
         jogo.jogador.desenhar();
         barraStatus.desenhar();
     }
 
-    // TODO: Passar isso para a lógica do jogo.
     /**
      * Processa toda a lógica do ENTER do jogador.
      */
@@ -59,14 +50,6 @@ public final class TelaJogatina extends Tela {
 
         if (textoExtraido.equals("")) {
             return;
-        }
-
-        String[] palavrasValidas = { "Andar", "Baixar", "Cair" };
-        for (String palavra : palavrasValidas) {
-            if (textoExtraido.equals(palavra)) {
-                jogo.jogador.pontuador.incrementar(palavra.length());
-                return;
-            }
         }
 
         jogo.jogador.vidas--;
