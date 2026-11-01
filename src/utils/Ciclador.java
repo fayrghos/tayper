@@ -3,7 +3,7 @@ package utils;
 /**
  * Implementa contagens cíclicas de números inteiros.
  */
-public class CicloInteiro {
+public class Ciclador {
 
     public int atual;
     public int min;
@@ -16,7 +16,7 @@ public class CicloInteiro {
      * @param min O valor mínimo do contador.
      * @param max O valor máximo do contador.
      */
-    public CicloInteiro(int inicial, int min, int max) {
+    public Ciclador(int inicial, int min, int max) {
         this.atual = inicial;
         this.min = min;
         this.max = max;
