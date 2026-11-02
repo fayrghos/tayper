@@ -55,6 +55,7 @@ public final class Pontuador {
 
     /**
      * Obtem a pontuação do jogador.
+     *
      * @return A pontuação do jogador.
      */
     public int pontuacaoAtual() {

@@ -47,6 +47,7 @@ public final class Digitador implements Atualizavel, Desenhavel {
 
     /**
      * Extrai o texto atual e apaga o que está no campo de digitação.
+     *
      * @return O texto que está no campo.
      */
     public String extrairTexto() {
@@ -57,6 +58,7 @@ public final class Digitador implements Atualizavel, Desenhavel {
 
     /**
      * Valida e adiciona um novo caractere no campo de texto.
+     *
      * @param novoChar O caractere desejado.
      */
     private void adicionarChar(char novoChar) {

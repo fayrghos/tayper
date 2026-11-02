@@ -14,7 +14,7 @@ import ui.telas.TelaPrincipal;
 import ui.telas.TipoTela;
 
 /**
- * O coração da lógica do jogo.
+ * O orquestrador principal do jogo.
  */
 public final class Jogo implements Atualizavel, Desenhavel {
 
@@ -48,6 +48,7 @@ public final class Jogo implements Atualizavel, Desenhavel {
 
     /**
      * Verifica se o jogo deve continuar rodando.
+     *
      * @return O estado atual do jogo.
      */
     public boolean rodando() {
@@ -77,6 +78,7 @@ public final class Jogo implements Atualizavel, Desenhavel {
 
     /**
      * Alterna para outra Tela cadastrada na instância do jogo.
+     *
      * @param tela A tela de destino.
      */
     public void mudarTela(TipoTela tela) {

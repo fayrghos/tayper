@@ -15,6 +15,7 @@ public abstract class Tela implements Atualizavel, Desenhavel {
 
     /**
      * Cria uma nova instância da tela.
+     *
      * @param jogo Uma instância do jogo
      */
     public Tela(Jogo jogo) {

@@ -36,6 +36,7 @@ public class Texto {
 
     /**
      * Altera a fonte do texto.
+     *
      * @param novaFonte A nova fonte.
      * @return A própria instância.
      */
@@ -46,6 +47,7 @@ public class Texto {
 
     /**
      * Altera o espaçamento entre o texto.
+     *
      * @param novoEspaco O novo espaçamento.
      * @return A própria instância.
      */
@@ -56,6 +58,7 @@ public class Texto {
 
     /**
      * Altera a cor do texto.
+     *
      * @param novaCor A nova cor.
      * @return A própria instância.
      */

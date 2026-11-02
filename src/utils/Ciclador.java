@@ -24,6 +24,7 @@ public class Ciclador {
 
     /**
      * Incrementa o contador de maneira cíclica.
+     *
      * @param fator O valor do incremento.
      */
     public void incrementar(int fator) {

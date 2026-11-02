@@ -8,7 +8,7 @@ import core.ciclo.Desenhavel;
 import utils.Geral;
 
 /**
- * Classe base para todas as entidades do jogo.
+ * Representa uma base para todas as entidades do jogo.
  */
 public abstract class Entidade implements Atualizavel, Desenhavel {
 
@@ -21,6 +21,7 @@ public abstract class Entidade implements Atualizavel, Desenhavel {
         this.posicao = posicao;
     }
 
+    @Override
     public void desenhar() {
         Raylib.DrawRectangleV(
             Raylib.Vector2Subtract(

@@ -31,6 +31,7 @@ public abstract class Caixa {
 
     /**
      * Redesenha a caixa na tela.
+     *
      * @param focoAtivo Informa se a caixa está focada ou não.
      */
     public void desenhar(boolean focoAtivo) {
