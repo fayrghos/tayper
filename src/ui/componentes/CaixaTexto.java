@@ -10,7 +10,7 @@ import utils.Geral;
  */
 public class CaixaTexto extends Caixa {
 
-    Texto texto;
+    protected Texto texto;
 
     /**
      * Cria uma nova instância de caixa de texto.
@@ -19,12 +19,17 @@ public class CaixaTexto extends Caixa {
      * @param tamanho As dimensões da caixa.
      * @param linha O texto a ser exibido na caixa.
      */
-    public CaixaTexto(Vector2 posicao, Vector2 tamanho, String linha) {
-        super(posicao, tamanho);
+    public CaixaTexto(
+        String linha,
+        Vector2 posicao,
+        Vector2 tamanho,
+        boolean centralizar
+    ) {
+        super(posicao, tamanho, centralizar);
         this.texto = new Texto(
             linha,
             24,
-            Raylib.Vector2Add(posicao, Geral.divideVetor(tamanho, 2))
+            Raylib.Vector2Add(this.posicao, Geral.divideVetor(tamanho, 2))
         ).cor(Colors.BLACK);
     }
 

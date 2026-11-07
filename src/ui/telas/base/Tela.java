@@ -25,7 +25,7 @@ public abstract class Tela implements Atualizavel, Desenhavel {
     @Override
     public void atualizar() {
         if (Raylib.IsKeyPressed(Raylib.KEY_ESCAPE)) {
-            jogo.mudarTela(TipoTela.MENU);
+            jogo.mudarTela(TipoTela.INICIAL);
         }
     }
 

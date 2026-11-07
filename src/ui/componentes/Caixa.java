@@ -5,17 +5,19 @@ import com.raylib.Raylib;
 import com.raylib.Raylib.Font;
 import com.raylib.Raylib.Rectangle;
 import com.raylib.Raylib.Vector2;
+import utils.Geral;
 
 /**
  * Implementa caixas de interface simples.
  */
 public abstract class Caixa {
 
-    final int espessuraCont = 5;
+    private final int espessuraCont = 5;
 
-    Vector2 posicao;
-    Vector2 tamanho;
-    Font fonte;
+    protected Vector2 posicao;
+    protected Vector2 tamanho;
+    protected Font fonte;
+    protected boolean centralizar;
 
     /**
      * Cria uma nova instância de caixa.
@@ -23,10 +25,18 @@ public abstract class Caixa {
      * @param posicao A posição da caixa.
      * @param tamanho As dimensões da caixa.
      */
-    public Caixa(Vector2 posicao, Vector2 tamanho) {
+    public Caixa(Vector2 posicao, Vector2 tamanho, boolean centralizar) {
         this.posicao = posicao;
         this.tamanho = tamanho;
+        this.centralizar = centralizar;
         this.fonte = Raylib.GetFontDefault();
+
+        if (centralizar) {
+            this.posicao = Raylib.Vector2Subtract(
+                this.posicao,
+                Geral.divideVetor(this.tamanho, 2)
+            );
+        }
     }
 
     /**

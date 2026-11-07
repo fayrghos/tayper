@@ -6,28 +6,37 @@ import com.raylib.Raylib.Vector2;
 import core.Jogo;
 import ui.componentes.CaixaTexto;
 import ui.telas.base.Tela;
+import ui.telas.base.TipoTela;
 import utils.Ciclador;
 
 /**
  * Representa o menu principal do jogo.
  */
-public final class TelaMenu extends Tela {
+public final class TelaInicial extends Tela {
 
     private final CaixaTexto[] botoes = {
         new CaixaTexto(
-            new Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA - 200),
-            new Vector2().x(200).y(50),
-            "Iniciar"
+            "Iniciar",
+            new Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA - 260),
+            new Vector2().x(300).y(50),
+            true
         ),
         new CaixaTexto(
+            "Opções",
+            new Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA - 180),
+            new Vector2().x(300).y(50),
+            true
+        ),
+        new CaixaTexto(
+            "Sair",
             new Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA - 100),
-            new Vector2().x(200).y(50),
-            "Opções"
+            new Vector2().x(300).y(50),
+            true
         ),
     };
     private Ciclador cicloBotao;
 
-    public TelaMenu(Jogo jogo) {
+    public TelaInicial(Jogo jogo) {
         super(jogo);
         this.cicloBotao = new Ciclador(0, 0, botoes.length - 1);
     }
@@ -40,6 +49,14 @@ public final class TelaMenu extends Tela {
 
         if (Raylib.IsKeyPressed(Raylib.KEY_UP)) {
             cicloBotao.incrementar(-1);
+        }
+
+        if (Raylib.IsKeyPressed(Raylib.KEY_ENTER)) {
+            switch (cicloBotao.atual) {
+                case 0 -> jogo.mudarTela(TipoTela.PARTIDA);
+                case 1 -> jogo.mudarTela(TipoTela.CREDITOS);
+                case 2 -> jogo.encerrar();
+            }
         }
     }
 
