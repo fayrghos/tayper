@@ -1,7 +1,7 @@
 package core.entidades;
 
 import com.raylib.Raylib.Vector2;
-import core.Pontuador;
+import core.mecanicas.Pontuador;
 
 /**
  * Representa um jogador.

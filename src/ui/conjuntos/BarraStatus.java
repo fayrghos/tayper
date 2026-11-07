@@ -1,12 +1,12 @@
-package ui.hud;
+package ui.conjuntos;
 
 import com.raylib.Colors;
 import com.raylib.Raylib;
 import com.raylib.Raylib.Vector2;
-import core.Digitador;
 import core.Jogo;
-import core.ciclo.Desenhavel;
 import core.entidades.Jogador;
+import core.fluxo.Desenhavel;
+import core.mecanicas.Digitador;
 import ui.componentes.Texto;
 
 /**

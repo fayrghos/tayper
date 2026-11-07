@@ -1,4 +1,4 @@
-package ui.telas;
+package ui.telas.base;
 
 /**
  * Lista todas as telas possíveis.

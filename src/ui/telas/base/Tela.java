@@ -1,10 +1,10 @@
-package ui.telas;
+package ui.telas.base;
 
 import com.raylib.Colors;
 import com.raylib.Raylib;
 import core.Jogo;
-import core.ciclo.Atualizavel;
-import core.ciclo.Desenhavel;
+import core.fluxo.Atualizavel;
+import core.fluxo.Desenhavel;
 
 /**
  * Implementa a lógica de cada tela do jogo.

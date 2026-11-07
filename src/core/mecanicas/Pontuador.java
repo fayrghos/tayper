@@ -1,4 +1,4 @@
-package core;
+package core.mecanicas;
 
 /**
  * Implementa contagens de inteiros.

@@ -2,16 +2,12 @@ package core;
 
 import com.raylib.Raylib;
 import com.raylib.Raylib.Vector2;
-import core.ciclo.Atualizavel;
-import core.ciclo.Desenhavel;
 import core.entidades.Jogador;
+import core.fluxo.Atualizavel;
+import core.fluxo.Desenhavel;
 import java.util.Map;
-import ui.telas.Tela;
-import ui.telas.TelaCreditos;
-import ui.telas.TelaFim;
-import ui.telas.TelaJogatina;
-import ui.telas.TelaPrincipal;
-import ui.telas.TipoTela;
+import ui.telas.base.Tela;
+import ui.telas.base.TipoTela;
 
 /**
  * O orquestrador principal do jogo.
@@ -33,16 +29,7 @@ public final class Jogo implements Atualizavel, Desenhavel {
             new Vector2().x(64).y(64)
         );
 
-        this.telas = Map.of(
-            TipoTela.PRINCIPAL,
-            new TelaPrincipal(this),
-            TipoTela.CREDITOS,
-            new TelaCreditos(this),
-            TipoTela.JOGO,
-            new TelaJogatina(this),
-            TipoTela.FIM,
-            new TelaFim(this)
-        );
+        this.telas = Map.of();
         this.telaAtual = telas.get(TipoTela.PRINCIPAL);
     }
 

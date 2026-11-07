@@ -1,8 +1,9 @@
-package core;
+package core.mecanicas;
 
 import com.raylib.Raylib;
-import core.ciclo.Atualizavel;
-import core.ciclo.Desenhavel;
+import core.Jogo;
+import core.fluxo.Atualizavel;
+import core.fluxo.Desenhavel;
 import ui.componentes.Texto;
 import utils.Geral;
 

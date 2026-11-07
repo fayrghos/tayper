@@ -3,8 +3,8 @@ package core.entidades;
 import com.raylib.Colors;
 import com.raylib.Raylib;
 import com.raylib.Raylib.Vector2;
-import core.ciclo.Atualizavel;
-import core.ciclo.Desenhavel;
+import core.fluxo.Atualizavel;
+import core.fluxo.Desenhavel;
 import utils.Geral;
 
 /**

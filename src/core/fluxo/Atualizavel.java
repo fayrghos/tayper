@@ -1,4 +1,4 @@
-package core.ciclo;
+package core.fluxo;
 
 /**
  * Para objetos que serão recalculados a cada tick.
