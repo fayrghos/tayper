@@ -22,6 +22,16 @@ public abstract class Tela implements Atualizavel, Desenhavel {
         this.jogo = jogo;
     }
 
+    /**
+     * Chamada sempre que a tela é alternada para essa.
+     */
+    public void focar() {}
+
+    /**
+     * Chamada sempre que a tela é alternada para outra.
+     */
+    public void desfocar() {}
+
     @Override
     public void atualizar() {
         if (Raylib.IsKeyPressed(Raylib.KEY_ESCAPE)) {

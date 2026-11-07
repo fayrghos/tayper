@@ -10,7 +10,7 @@ public final class Jogador extends Entidade {
 
     public Pontuador pontuador;
 
-    public Jogador(Vector2 posicao, Vector2 tamanhoBox) {
+    public Jogador(Vector2 posicao) {
         super(3, posicao);
         this.pontuador = new Pontuador();
     }

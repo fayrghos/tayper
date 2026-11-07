@@ -12,7 +12,7 @@ import utils.fluxo.Desenhavel;
  */
 public abstract class Entidade implements Atualizavel, Desenhavel {
 
-    public int vidas = 1;
+    public int vidas;
     public Vector2 posicao;
     public Vector2 tamanhoBox = new Vector2().x(64).y(64);
 

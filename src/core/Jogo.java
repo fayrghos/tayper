@@ -1,8 +1,6 @@
 package core;
 
 import com.raylib.Raylib;
-import com.raylib.Raylib.Vector2;
-import core.entidades.Jogador;
 import java.util.Map;
 import ui.telas.TelaCreditos;
 import ui.telas.TelaInicial;
@@ -22,17 +20,12 @@ public final class Jogo implements Atualizavel, Desenhavel {
     public static final int ALTURA = 736;
     private boolean rodando = true;
 
-    public Jogador jogador;
-
     private Map<TipoTela, Tela> telas;
     private Tela telaAtual;
 
-    public Jogo() {
-        this.jogador = new Jogador(
-            new Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA / 2),
-            new Vector2().x(64).y(64)
-        );
+    private Partida partidaAtiva;
 
+    public Jogo() {
         this.telas = Map.of(
             TipoTela.INICIAL,
             new TelaInicial(this),
@@ -44,6 +37,22 @@ public final class Jogo implements Atualizavel, Desenhavel {
             new TelaMorte(this)
         );
         this.telaAtual = telas.get(TipoTela.INICIAL);
+    }
+
+    /**
+     * Inicia uma nova partida.
+     */
+    public void iniciarPartida() {
+        this.partidaAtiva = new Partida();
+    }
+
+    /**
+     * Obtém a partida ativa.
+
+     * @return A partida em andamento
+     */
+    public Partida partida() {
+        return this.partidaAtiva;
     }
 
     /**
@@ -82,6 +91,8 @@ public final class Jogo implements Atualizavel, Desenhavel {
      * @param tela A tela de destino.
      */
     public void mudarTela(TipoTela tela) {
+        telaAtual.desfocar();
         telaAtual = telas.get(tela);
+        telaAtual.focar();
     }
 }
