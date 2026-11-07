@@ -3,11 +3,12 @@ package core;
 import com.raylib.Raylib;
 import com.raylib.Raylib.Vector2;
 import core.entidades.Jogador;
-import core.fluxo.Atualizavel;
-import core.fluxo.Desenhavel;
 import java.util.Map;
+import ui.telas.TelaMenu;
 import ui.telas.base.Tela;
 import ui.telas.base.TipoTela;
+import utils.fluxo.Atualizavel;
+import utils.fluxo.Desenhavel;
 
 /**
  * O orquestrador principal do jogo.
@@ -29,8 +30,8 @@ public final class Jogo implements Atualizavel, Desenhavel {
             new Vector2().x(64).y(64)
         );
 
-        this.telas = Map.of();
-        this.telaAtual = telas.get(TipoTela.PRINCIPAL);
+        this.telas = Map.of(TipoTela.MENU, new TelaMenu(this));
+        this.telaAtual = telas.get(TipoTela.MENU);
     }
 
     /**

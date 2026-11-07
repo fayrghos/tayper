@@ -4,7 +4,7 @@ package ui.telas.base;
  * Lista todas as telas possíveis.
  */
 public enum TipoTela {
-    PRINCIPAL,
+    MENU,
     CREDITOS,
     JOGO,
     FIM,

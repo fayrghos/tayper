@@ -1,4 +1,4 @@
-package core.fluxo;
+package utils.fluxo;
 
 /**
  * Para objetos que serão redesenhados a cada tick.

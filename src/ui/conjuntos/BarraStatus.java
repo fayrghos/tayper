@@ -5,9 +5,9 @@ import com.raylib.Raylib;
 import com.raylib.Raylib.Vector2;
 import core.Jogo;
 import core.entidades.Jogador;
-import core.fluxo.Desenhavel;
 import core.mecanicas.Digitador;
 import ui.componentes.Texto;
+import utils.fluxo.Desenhavel;
 
 /**
  * Representa a barra que contém as informações cruciais para o jogador.

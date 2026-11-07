@@ -3,8 +3,8 @@ package ui.telas.base;
 import com.raylib.Colors;
 import com.raylib.Raylib;
 import core.Jogo;
-import core.fluxo.Atualizavel;
-import core.fluxo.Desenhavel;
+import utils.fluxo.Atualizavel;
+import utils.fluxo.Desenhavel;
 
 /**
  * Implementa a lógica de cada tela do jogo.
@@ -25,7 +25,7 @@ public abstract class Tela implements Atualizavel, Desenhavel {
     @Override
     public void atualizar() {
         if (Raylib.IsKeyPressed(Raylib.KEY_ESCAPE)) {
-            jogo.mudarTela(TipoTela.PRINCIPAL);
+            jogo.mudarTela(TipoTela.MENU);
         }
     }
 

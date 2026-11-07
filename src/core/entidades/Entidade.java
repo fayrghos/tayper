@@ -3,9 +3,9 @@ package core.entidades;
 import com.raylib.Colors;
 import com.raylib.Raylib;
 import com.raylib.Raylib.Vector2;
-import core.fluxo.Atualizavel;
-import core.fluxo.Desenhavel;
 import utils.Geral;
+import utils.fluxo.Atualizavel;
+import utils.fluxo.Desenhavel;
 
 /**
  * Representa uma base para todas as entidades do jogo.

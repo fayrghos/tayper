@@ -2,10 +2,10 @@ package core.mecanicas;
 
 import com.raylib.Raylib;
 import core.Jogo;
-import core.fluxo.Atualizavel;
-import core.fluxo.Desenhavel;
 import ui.componentes.Texto;
 import utils.Geral;
+import utils.fluxo.Atualizavel;
+import utils.fluxo.Desenhavel;
 
 /**
  * Responsável por processar os comandos de digitação do jogador.
