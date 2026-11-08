@@ -58,12 +58,13 @@ public final class Partida implements Atualizavel, Desenhavel {
             boolean encontrado = false;
             for (int i = 0; i < inimigos.length; i++) {
                 if (!inimigos[i].ativa()) {
-                    break;
+                    continue;
                 }
 
                 if (texto.equals(inimigos[i].palavraChave)) {
                     encontrado = true;
                     inimigos[i].desativar();
+                    jogador.pontuador.incrementar(10);
                 }
             }
 

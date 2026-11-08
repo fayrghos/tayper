@@ -22,7 +22,7 @@ public final class TelaInicial extends Tela {
             true
         ),
         new CaixaTexto(
-            "Opções",
+            "Créditos",
             new Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA - 180),
             new Vector2().x(300).y(50),
             true
