@@ -12,9 +12,6 @@ public class Inimigo extends Entidade {
     public String palavraChave;
     private CaixaTexto caixaPalavra;
 
-    // TODO: Apenas para testes. Remover depois
-    public boolean vivo = true;
-
     public Inimigo(Vector2 posicao, String palavraChave) {
         super(1, posicao);
         this.palavraChave = palavraChave;
@@ -31,7 +28,7 @@ public class Inimigo extends Entidade {
 
     @Override
     public void desenhar() {
-        if (!vivo) {
+        if (!ativo) {
             return;
         }
 

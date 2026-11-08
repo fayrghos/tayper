@@ -43,7 +43,7 @@ public final class BarraStatus implements Desenhavel {
         digitador.desenhar();
 
         new Texto(
-            String.format("%d HP", jogador.vidas),
+            String.format("%d HP", jogador.vida()),
             32,
             new Vector2().x(100).y(Jogo.ALTURA - 120)
         ).desenharCentro();

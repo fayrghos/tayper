@@ -2,6 +2,7 @@ package ui.telas;
 
 import core.Jogo;
 import ui.telas.base.Tela;
+import ui.telas.base.TipoTela;
 
 /**
  * Representa a tela que será exibida durante jogatinas.
@@ -25,5 +26,9 @@ public final class TelaPartida extends Tela {
     @Override
     public void atualizar() {
         jogo.partida().atualizar();
+
+        if (jogo.partida().jogador.vida() < 1) {
+            jogo.mudarTela(TipoTela.MORTE);
+        }
     }
 }

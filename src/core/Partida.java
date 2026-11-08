@@ -55,10 +55,20 @@ public final class Partida implements Atualizavel, Desenhavel {
         if (Raylib.IsKeyPressed(Raylib.KEY_ENTER)) {
             String texto = digitador.extrairTexto();
 
+            boolean encontrado = false;
             for (int i = 0; i < inimigos.length; i++) {
-                if (texto.equals(inimigos[i].palavraChave)) {
-                    inimigos[i].vivo = false;
+                if (!inimigos[i].ativa()) {
+                    break;
                 }
+
+                if (texto.equals(inimigos[i].palavraChave)) {
+                    encontrado = true;
+                    inimigos[i].desativar();
+                }
+            }
+
+            if (!encontrado) {
+                jogador.danificar(1);
             }
         }
     }
