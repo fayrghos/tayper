@@ -53,7 +53,7 @@ public final class Partida implements Atualizavel, Desenhavel {
         digitador.atualizar();
 
         if (Raylib.IsKeyPressed(Raylib.KEY_ENTER)) {
-            String texto = digitador.extrairTexto();
+            String entrada = digitador.extrairTexto();
 
             boolean encontrado = false;
             for (int i = 0; i < inimigos.length; i++) {
@@ -61,15 +61,16 @@ public final class Partida implements Atualizavel, Desenhavel {
                     continue;
                 }
 
-                if (texto.equals(inimigos[i].palavraChave)) {
-                    encontrado = true;
-                    inimigos[i].desativar();
+                if (inimigos[i].testarPalavra(entrada)) {
+                    jogador.causarDano(inimigos[i]);
                     jogador.pontuador.incrementar(10);
+                    encontrado = true;
                 }
             }
 
             if (!encontrado) {
-                jogador.danificar(1);
+                jogador.receberDano(1);
+                jogador.pontuador.reiniciarSequencia();
             }
         }
     }

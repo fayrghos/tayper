@@ -23,6 +23,15 @@ public class Inimigo extends Entidade {
         );
     }
 
+    /**
+     * Testa se a palavra inserida é igual a palavra do inimigo.
+     *
+     * @return Se as palavras coincidem.
+     */
+    public boolean testarPalavra(String palavra) {
+        return palavraChave.equals(palavra);
+    }
+
     @Override
     public void atualizar() {}
 

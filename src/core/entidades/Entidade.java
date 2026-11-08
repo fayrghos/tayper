@@ -17,6 +17,7 @@ public abstract class Entidade implements Atualizavel, Desenhavel {
 
     protected int vida;
     protected boolean ativo = true; // TODO: Remover depois.
+    protected int dano = 1;
 
     public Entidade(int vida, Vector2 posicao) {
         this.vida = vida;
@@ -33,11 +34,20 @@ public abstract class Entidade implements Atualizavel, Desenhavel {
     }
 
     /**
-     * Causa dano na entidade, se possível.
+     * Causa dano em uma entidade.
+     *
+     * @param entidade
+     */
+    public void causarDano(Entidade entidade) {
+        entidade.receberDano(dano);
+    }
+
+    /**
+     * Causa dano na própria entidade, se possível.
      *
      * @param dano O dano a ser causado.
      */
-    public void danificar(int dano) {
+    public void receberDano(int dano) {
         if (dano < 1) {
             return;
         }
