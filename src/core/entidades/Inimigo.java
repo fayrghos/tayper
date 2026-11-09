@@ -2,7 +2,7 @@ package core.entidades;
 
 import com.raylib.Raylib;
 import com.raylib.Raylib.Vector2;
-import ui.componentes.CaixaTexto;
+import ui.componentes.Placa;
 
 /**
  * Representa um inimigo no jogo
@@ -10,12 +10,12 @@ import ui.componentes.CaixaTexto;
 public class Inimigo extends Entidade {
 
     public String palavraChave;
-    private CaixaTexto caixaPalavra;
+    private Placa caixaPalavra;
 
     public Inimigo(Vector2 posicao, String palavraChave) {
         super(1, posicao);
         this.palavraChave = palavraChave;
-        this.caixaPalavra = new CaixaTexto(
+        this.caixaPalavra = new Placa(
             palavraChave,
             Raylib.Vector2Subtract(posicao, new Vector2().y(80)),
             new Vector2().x(100).y(30),
@@ -42,6 +42,6 @@ public class Inimigo extends Entidade {
         }
 
         super.desenhar();
-        caixaPalavra.desenhar(false);
+        caixaPalavra.desenhar();
     }
 }

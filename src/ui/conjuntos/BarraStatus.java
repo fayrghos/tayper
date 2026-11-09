@@ -45,19 +45,22 @@ public final class BarraStatus implements Desenhavel {
         new Texto(
             String.format("%d HP", jogador.vida()),
             32,
-            new Vector2().x(100).y(Jogo.ALTURA - 120)
-        ).desenharCentro();
+            new Vector2().x(100).y(Jogo.ALTURA - 120),
+            Colors.WHITE
+        ).desenhar();
 
         new Texto(
             String.format("%d pts", jogador.pontuador.pontuacaoAtual()),
             32,
-            new Vector2().x(100).y(Jogo.ALTURA - 60)
-        ).desenharCentro();
+            new Vector2().x(100).y(Jogo.ALTURA - 60),
+            Colors.WHITE
+        ).desenhar();
 
         new Texto(
             String.format("x%d", jogador.pontuador.sequenciaAtual()),
             32,
-            new Vector2().x(Jogo.LARGURA - 120).y(Jogo.ALTURA - 90)
-        ).desenharCentro();
+            new Vector2().x(Jogo.LARGURA - 120).y(Jogo.ALTURA - 90),
+            Colors.WHITE
+        ).desenhar();
     }
 }

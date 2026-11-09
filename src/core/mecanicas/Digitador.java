@@ -1,5 +1,6 @@
 package core.mecanicas;
 
+import com.raylib.Colors;
 import com.raylib.Raylib;
 import core.Jogo;
 import ui.componentes.Texto;
@@ -21,8 +22,9 @@ public final class Digitador implements Atualizavel, Desenhavel {
     public Digitador() {
         this.texto = new Texto(
             "",
-            80,
-            new Raylib.Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA - 80)
+            80f,
+            new Raylib.Vector2().x(Jogo.LARGURA / 2).y(Jogo.ALTURA - 80),
+            Colors.WHITE
         ).espaco(10);
     }
 
@@ -43,7 +45,7 @@ public final class Digitador implements Atualizavel, Desenhavel {
 
     @Override
     public void desenhar() {
-        this.texto.desenharCentro();
+        this.texto.desenhar();
     }
 
     /**
